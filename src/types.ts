@@ -3,25 +3,17 @@ export interface ServiceItem {
   title: string;
   tagline: string;
   description: string;
+  image: string;
   featured?: boolean;
-  isImageCard?: boolean;
-  iconName: 'briefcase' | 'compass' | 'trending-up' | 'shield-check' | 'globe' | 'coins';
-  deliverables: string[];
-  typicalClient: string;
-  caseStudy: {
-    client: string;
-    result: string;
-    duration: string;
-  };
+  deliverables?: string[];
+  category?: 'Hardware & Repairs' | 'Printing & Production' | 'Design & Signage';
 }
 
-export interface ConsultationRequest {
+export interface InquiryRequest {
   serviceId: string;
-  portfolioSize: string;
-  timeframe: string;
   fullName: string;
   email: string;
   phone: string;
-  preferredDate: string;
-  notes: string;
+  serviceCategory?: string;
+  details: string;
 }

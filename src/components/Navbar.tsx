@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  TrendingUp, 
   Menu, 
   X, 
   PhoneCall, 
-  ArrowRight, 
-  Calculator,
-  ShieldCheck,
-  ChevronDown
+  ArrowRight
 } from 'lucide-react';
 
 interface NavbarProps {
+  currentPage: 'home' | 'about' | 'services' | 'contact' | 'sitemap';
+  onNavigate: (page: 'home' | 'about' | 'services' | 'contact' | 'sitemap', sectionId?: string) => void;
   onOpenConsultation: (service?: string) => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ 
+  currentPage,
+  onNavigate,
   onOpenConsultation 
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,75 +28,100 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const handleNavClick = (page: 'home' | 'about' | 'services' | 'contact' | 'sitemap', sectionId?: string) => {
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    onNavigate(page, sectionId);
   };
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#051512]/90 backdrop-blur-md border-b border-emerald-900/30 py-3.5 shadow-xl shadow-black/20' 
-          : 'bg-transparent py-5'
+          ? 'bg-[#051512]/95 backdrop-blur-md border-b border-emerald-900/30 py-3.5 shadow-xl shadow-black/20' 
+          : 'bg-[#051512]/80 backdrop-blur-sm py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Zone 1: Brand Wordmark / Logo */}
-        <a 
-          href="#" 
-          className="flex items-center group py-0.5"
+        <button 
+          onClick={() => handleNavClick('home')}
+          className="flex items-center group py-0.5 cursor-pointer text-left"
         >
           <img 
             src="https://i.ibb.co/60dH7n7H/MOD-Innovations-Transparent-Logo-Light-Version.png" 
             alt="MOD Innovations Logo" 
-            className="h-12 sm:h-14 lg:h-[60px] w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-12 sm:h-14 lg:h-[58px] w-auto object-contain transition-transform group-hover:scale-105"
             referrerPolicy="no-referrer"
           />
-        </a>
+        </button>
 
         {/* Zone 2: Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
           <button 
-            onClick={() => scrollToSection('hero')} 
-            className="hover:text-[#a3e635] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('home')} 
+            className={`transition-colors cursor-pointer ${
+              currentPage === 'home' ? 'text-[#84CC16] font-semibold' : 'hover:text-[#84CC16]'
+            }`}
           >
-            Overview
+            Home
           </button>
           <button 
-            onClick={() => scrollToSection('about')} 
-            className="hover:text-[#a3e635] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('about')} 
+            className={`transition-colors cursor-pointer ${
+              currentPage === 'about' ? 'text-[#84CC16] font-semibold' : 'hover:text-[#84CC16]'
+            }`}
           >
-            About Advisory
+            About Us
           </button>
           <button 
-            onClick={() => scrollToSection('services')} 
-            className="hover:text-[#a3e635] transition-colors cursor-pointer"
+            onClick={() => handleNavClick('services')} 
+            className={`transition-colors cursor-pointer ${
+              currentPage === 'services' ? 'text-[#84CC16] font-semibold' : 'hover:text-[#84CC16]'
+            }`}
           >
             Services
+          </button>
+          <button 
+            onClick={() => handleNavClick('home', 'approach')} 
+            className="hover:text-[#84CC16] transition-colors cursor-pointer"
+          >
+            Why Choose Us
+          </button>
+          <button 
+            onClick={() => handleNavClick('contact')} 
+            className={`transition-colors cursor-pointer ${
+              currentPage === 'contact' ? 'text-[#84CC16] font-semibold' : 'hover:text-[#84CC16]'
+            }`}
+          >
+            Contact
+          </button>
+          <button 
+            onClick={() => handleNavClick('sitemap')} 
+            className={`transition-colors cursor-pointer ${
+              currentPage === 'sitemap' ? 'text-[#84CC16] font-semibold' : 'hover:text-[#84CC16]'
+            }`}
+          >
+            Sitemap
           </button>
         </nav>
 
         {/* Zone 3: Primary Actions */}
         <div className="hidden lg:flex items-center gap-4">
           <a 
-            href="tel:+18005550199" 
+            href="tel:0207004123" 
             className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            <div className="w-7 h-7 rounded-full bg-emerald-900/50 flex items-center justify-center text-[#a3e635]">
+            <div className="w-7 h-7 rounded-full bg-emerald-900/50 flex items-center justify-center text-[#84CC16]">
               <PhoneCall className="w-3.5 h-3.5" />
             </div>
-            <span>+1 (800) 555-0199</span>
+            <span>0207004123</span>
           </a>
 
           <button
-            onClick={() => onOpenConsultation()}
-            className="inline-flex items-center gap-2 px-5 py-2 text-xs uppercase tracking-wider font-bold text-slate-950 bg-[#a3e635] hover:bg-[#bef264] rounded-[50px] transition-all duration-200 shadow-md shadow-lime-500/10 cursor-pointer active:scale-95"
+            onClick={() => onOpenConsultation('General IT & Printing Inquiry')}
+            className="inline-flex items-center gap-2 px-5 py-2 text-xs uppercase tracking-wider font-bold text-slate-950 bg-[#84CC16] hover:bg-[#bef264] rounded-[50px] transition-all duration-200 shadow-md shadow-lime-500/10 cursor-pointer active:scale-95"
           >
-            <span>Request Consultation</span>
+            <span>Request Service</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -104,10 +129,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Mobile Hamburger Toggle */}
         <div className="md:hidden flex items-center gap-2">
           <button
-            onClick={() => onOpenConsultation()}
-            className="px-3 py-1.5 text-xs font-bold text-slate-950 bg-[#a3e635] rounded-md"
+            onClick={() => onOpenConsultation('Quick Mobile Inquiry')}
+            className="px-3 py-1.5 text-xs font-bold text-slate-950 bg-[#84CC16] hover:bg-[#bef264] rounded-[50px] transition-colors"
           >
-            Consult
+            Inquire
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -124,31 +149,56 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="md:hidden bg-[#071d18] border-b border-emerald-900/40 px-6 py-5 space-y-4 shadow-2xl animate-in slide-in-from-top duration-200">
           <div className="flex flex-col space-y-3 text-sm font-medium text-slate-200">
             <button 
-              onClick={() => scrollToSection('hero')} 
-              className="text-left py-2 hover:text-[#a3e635]"
+              onClick={() => handleNavClick('home')} 
+              className={`text-left py-2 ${currentPage === 'home' ? 'text-[#84CC16] font-bold' : 'hover:text-[#84CC16]'}`}
             >
-              Overview
+              Home
             </button>
             <button 
-              onClick={() => scrollToSection('about')} 
-              className="text-left py-2 hover:text-[#a3e635]"
+              onClick={() => handleNavClick('about')} 
+              className={`text-left py-2 ${currentPage === 'about' ? 'text-[#84CC16] font-bold' : 'hover:text-[#84CC16]'}`}
             >
-              About Advisory
+              About Us
             </button>
             <button 
-              onClick={() => scrollToSection('services')} 
-              className="text-left py-2 hover:text-[#a3e635]"
+              onClick={() => handleNavClick('services')} 
+              className={`text-left py-2 ${currentPage === 'services' ? 'text-[#84CC16] font-bold' : 'hover:text-[#84CC16]'}`}
             >
-              Finance Services
+              Services
+            </button>
+            <button 
+              onClick={() => handleNavClick('home', 'approach')} 
+              className="text-left py-2 hover:text-[#84CC16]"
+            >
+              Why Choose Us
+            </button>
+            <button 
+              onClick={() => handleNavClick('contact')} 
+              className={`text-left py-2 ${currentPage === 'contact' ? 'text-[#84CC16] font-bold' : 'hover:text-[#84CC16]'}`}
+            >
+              Contact
+            </button>
+            <button 
+              onClick={() => handleNavClick('sitemap')} 
+              className={`text-left py-2 ${currentPage === 'sitemap' ? 'text-[#84CC16] font-bold' : 'hover:text-[#84CC16]'}`}
+            >
+              Sitemap
             </button>
           </div>
 
           <div className="pt-3 border-t border-emerald-900/40 flex flex-col gap-3">
-            <button
-              onClick={() => { setMobileMenuOpen(false); onOpenConsultation(); }}
-              className="w-full py-2.5 text-center text-xs uppercase tracking-wider font-bold text-slate-950 bg-[#a3e635] rounded-md"
+            <a
+              href="tel:0207004123"
+              className="flex items-center gap-2 text-xs font-semibold text-slate-300 py-1"
             >
-              Request A Consultation
+              <PhoneCall className="w-3.5 h-3.5 text-[#84cc16]" />
+              <span>Direct Phone: 0207004123</span>
+            </a>
+            <button
+              onClick={() => { setMobileMenuOpen(false); onOpenConsultation('Mobile Service Request'); }}
+              className="w-full py-2.5 text-center text-xs uppercase tracking-wider font-bold text-slate-950 bg-[#84CC16] hover:bg-[#bef264] rounded-[50px] transition-colors"
+            >
+              Request Service
             </button>
           </div>
         </div>
