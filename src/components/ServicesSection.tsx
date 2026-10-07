@@ -1,13 +1,13 @@
 import React from 'react';
 import { 
-  ArrowUpRight, 
-  Landmark, 
-  Compass, 
-  ShieldCheck, 
-  Sprout, 
-  Building2 
+  ArrowUpRight 
 } from 'lucide-react';
+import investCardImg from '../assets/images/invest_mgmt_card_1791373722823.jpg';
+import wealthwiseCardImg from '../assets/images/wealthwise_card_1791373736124.jpg';
+import navigatorsCardImg from '../assets/images/fin_navigators_card_1791373751527.jpg';
+import growingCardImg from '../assets/images/fin_growth_card_1791373764498.jpg';
 import consultationCardImg from '../assets/images/executive_consultation_card_1791349987924.jpg';
+import horizonCardImg from '../assets/images/horizon_wealth_card_1791373775236.jpg';
 import darkBgImg from '../assets/images/hero_dark_bg_1791350497284.jpg';
 import { ServiceItem } from '../types';
 
@@ -156,7 +156,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         
         {/* Centered Eyebrow Label & Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <div className="inline-block px-3 py-1 rounded-sm bg-[#0a2721] border border-emerald-800/60 shadow-sm">
+          <div className="inline-block">
             <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
               OUR FINANCE SERVICES
             </span>
@@ -170,122 +170,126 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         {/* Structured Three-Column Service-Card Layout (3 cols x 2 rows) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           
-          {/* Card 1: Invest Management (White Card) */}
+          {/* Card 1: Invest Management */}
           <div 
             onClick={() => onSelectService(servicesData[0])}
-            className="group relative bg-white text-slate-900 p-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-slate-100 min-h-[340px]"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
-            <div className="space-y-4 flex flex-col items-center">
-              {/* Concentric Circular Icon Badge */}
-              <div className="w-16 h-16 rounded-full bg-emerald-100/70 p-1 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#84cc16] flex items-center justify-center text-slate-950 shadow-sm">
-                  <Landmark className="w-6 h-6 stroke-[2]" />
-                </div>
-              </div>
+            <img 
+              src={investCardImg} 
+              alt={servicesData[0].title}
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
+              referrerPolicy="no-referrer"
+            />
+            {/* Ambient Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-slate-900 font-display">
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                 {servicesData[0].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xs">
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
                 {servicesData[0].description}
               </p>
-            </div>
 
-            {/* Bottom Circular Arrow Button */}
-            <div className="pt-6">
-              <div className="w-9 h-9 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              {/* Bottom Circular Arrow Button */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>
 
-          {/* Card 2: WealthWise Consulting (Green Highlighted Middle Card) */}
+          {/* Card 2: WealthWise Consulting */}
           <div 
             onClick={() => onSelectService(servicesData[1])}
-            className="group relative bg-[#84cc16] text-slate-950 p-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-lime-300/40 min-h-[340px]"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
-            <div className="space-y-4 flex flex-col items-center">
-              {/* Concentric Circular Icon Badge (White on Green) */}
-              <div className="w-16 h-16 rounded-full bg-white/25 p-1 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-emerald-800 shadow-sm">
-                  <Compass className="w-6 h-6 stroke-[2]" />
-                </div>
-              </div>
+            <img 
+              src={wealthwiseCardImg} 
+              alt={servicesData[1].title}
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
+              referrerPolicy="no-referrer"
+            />
+            {/* Ambient Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-slate-950 font-display">
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                 {servicesData[1].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-slate-900 leading-relaxed font-normal max-w-xs">
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
                 {servicesData[1].description}
               </p>
-            </div>
 
-            {/* Bottom Circular Arrow Button */}
-            <div className="pt-6">
-              <div className="w-9 h-9 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              {/* Bottom Circular Arrow Button */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>
 
-          {/* Card 3: Financial Navigators (White Card) */}
+          {/* Card 3: Financial Navigators */}
           <div 
             onClick={() => onSelectService(servicesData[2])}
-            className="group relative bg-white text-slate-900 p-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-slate-100 min-h-[340px]"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
-            <div className="space-y-4 flex flex-col items-center">
-              {/* Concentric Circular Icon Badge */}
-              <div className="w-16 h-16 rounded-full bg-emerald-100/70 p-1 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#84cc16] flex items-center justify-center text-slate-950 shadow-sm">
-                  <ShieldCheck className="w-6 h-6 stroke-[2]" />
-                </div>
-              </div>
+            <img 
+              src={navigatorsCardImg} 
+              alt={servicesData[2].title}
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
+              referrerPolicy="no-referrer"
+            />
+            {/* Ambient Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-slate-900 font-display">
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                 {servicesData[2].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xs">
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
                 {servicesData[2].description}
               </p>
-            </div>
 
-            {/* Bottom Circular Arrow Button */}
-            <div className="pt-6">
-              <div className="w-9 h-9 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              {/* Bottom Circular Arrow Button */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>
 
-          {/* Card 4: Financial Growing (White Card) */}
+          {/* Card 4: Financial Growing */}
           <div 
             onClick={() => onSelectService(servicesData[3])}
-            className="group relative bg-white text-slate-900 p-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-slate-100 min-h-[340px]"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
-            <div className="space-y-4 flex flex-col items-center">
-              {/* Concentric Circular Icon Badge */}
-              <div className="w-16 h-16 rounded-full bg-emerald-100/70 p-1 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#84cc16] flex items-center justify-center text-slate-950 shadow-sm">
-                  <Sprout className="w-6 h-6 stroke-[2]" />
-                </div>
-              </div>
+            <img 
+              src={growingCardImg} 
+              alt={servicesData[3].title}
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
+              referrerPolicy="no-referrer"
+            />
+            {/* Ambient Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-slate-900 font-display">
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                 {servicesData[3].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xs">
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
                 {servicesData[3].description}
               </p>
-            </div>
 
-            {/* Bottom Circular Arrow Button */}
-            <div className="pt-6">
-              <div className="w-9 h-9 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              {/* Bottom Circular Arrow Button */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>
@@ -293,51 +297,61 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           {/* Card 5: Executive Image Card (Middle Photo Card) */}
           <div 
             onClick={() => onOpenConsultation('Private Executive Advisory Session')}
-            className="group relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end p-6 cursor-pointer border border-emerald-800/40 hover:border-[#a3e635] transition-all duration-300"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
             <img 
               src={consultationCardImg} 
               alt="Executive financial consultation meeting" 
-              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
               referrerPolicy="no-referrer"
             />
             {/* Ambient Dark Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/90 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-            {/* Bottom Circular Arrow Button on Photo Card */}
-            <div className="relative z-10 flex justify-center pt-4">
-              <div className="w-9 h-9 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
+                {servicesData[4].title}
+              </h3>
+
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
+                {servicesData[4].description}
+              </p>
+
+              {/* Bottom Circular Arrow Button on Photo Card */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>
 
-          {/* Card 6: Horizon Wealth Advisors (White Card) */}
+          {/* Card 6: Horizon Wealth Advisors */}
           <div 
             onClick={() => onSelectService(servicesData[5])}
-            className="group relative bg-white text-slate-900 p-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-slate-100 min-h-[340px]"
+            className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[340px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
           >
-            <div className="space-y-4 flex flex-col items-center">
-              {/* Concentric Circular Icon Badge */}
-              <div className="w-16 h-16 rounded-full bg-emerald-100/70 p-1 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#84cc16] flex items-center justify-center text-slate-950 shadow-sm">
-                  <Building2 className="w-6 h-6 stroke-[2]" />
-                </div>
-              </div>
+            <img 
+              src={horizonCardImg} 
+              alt={servicesData[5].title}
+              className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 border-none"
+              referrerPolicy="no-referrer"
+            />
+            {/* Ambient Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/50 to-transparent pointer-events-none" />
 
-              <h3 className="text-xl font-bold text-slate-900 font-display">
+            {/* Title positioned just above the round icon shape */}
+            <div className="relative z-10 w-full flex flex-col items-center space-y-3">
+              <h3 className="text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                 {servicesData[5].title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-xs">
+              <p className="text-xs sm:text-sm text-[#EFDEBC] leading-relaxed font-normal max-w-xs opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-36 transition-all duration-300 drop-shadow-md px-1">
                 {servicesData[5].description}
               </p>
-            </div>
 
-            {/* Bottom Circular Arrow Button */}
-            <div className="pt-6">
-              <div className="w-9 h-9 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              {/* Bottom Circular Arrow Button */}
+              <div className="w-9 h-9 rounded-full bg-[#84cc16] group-hover:bg-[#EFDFBD] text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-200">
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-slate-950" />
               </div>
             </div>
           </div>

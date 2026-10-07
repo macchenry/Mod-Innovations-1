@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, ArrowRight, ShieldCheck, Mail, Check, Phone, MapPin } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 interface FooterProps {
   onOpenConsultation: () => void;
@@ -43,10 +43,6 @@ export const Footer: React.FC<FooterProps> = ({
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
               Strategic financial consulting, custom portfolio architecture, and risk hedging for high-net-worth individuals, institutional clients, and growth enterprises.
             </p>
-            <div className="flex items-center gap-2 text-emerald-400 text-xs">
-              <ShieldCheck className="w-4 h-4 text-[#a3e635]" />
-              <span>Fiduciary Standard · Quantitative Precision</span>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -97,11 +93,11 @@ export const Footer: React.FC<FooterProps> = ({
                   placeholder="Enter executive email..."
                   value={subscribedEmail}
                   onChange={(e) => setSubscribedEmail(e.target.value)}
-                  className="bg-[#061814] border border-emerald-900 rounded-lg px-3 py-2 text-xs text-white placeholder:text-slate-600 focus:outline-none focus:border-[#a3e635] flex-1"
+                  className="bg-[#061814] border border-emerald-900 rounded-none px-3 py-2 text-xs text-white placeholder:text-slate-600 focus:outline-none focus:border-[#a3e635] flex-1"
                 />
                 <button
                   type="submit"
-                  className="px-3 py-2 rounded-lg bg-[#a3e635] hover:bg-[#bef264] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all"
+                  className="px-3 py-2 rounded-none bg-[#a3e635] hover:bg-[#bef264] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all"
                 >
                   Join
                 </button>
@@ -111,28 +107,8 @@ export const Footer: React.FC<FooterProps> = ({
 
         </div>
 
-        {/* Global Hubs */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-400">
-          <div>
-            <div className="font-semibold text-white">New York (HQ)</div>
-            <div className="text-[11px] text-slate-500">452 5th Avenue, Fl 28</div>
-          </div>
-          <div>
-            <div className="font-semibold text-white">London</div>
-            <div className="text-[11px] text-slate-500">100 Bishopsgate, Level 19</div>
-          </div>
-          <div>
-            <div className="font-semibold text-white">Zurich</div>
-            <div className="text-[11px] text-slate-500">Bahnhofstrasse 42</div>
-          </div>
-          <div>
-            <div className="font-semibold text-white">Singapore</div>
-            <div className="text-[11px] text-slate-500">Marina Bay Financial Tower 2</div>
-          </div>
-        </div>
-
         {/* Bottom Tier / Regulatory & Copyright */}
-        <div className="pt-6 border-t border-emerald-950/60 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <p>
             © {new Date().getFullYear()} Advicx Financial Advisory LLC. All rights reserved. Past performance is not indicative of future returns.
           </p>

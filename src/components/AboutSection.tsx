@@ -20,7 +20,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
           <div className="lg:col-span-6 space-y-6 text-left max-w-xl">
             
             {/* Eyebrow Label */}
-            <div className="inline-block px-3 py-1 rounded-sm bg-[#0a2721] border border-emerald-800/60 shadow-sm">
+            <div className="inline-block">
               <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                 ABOUT OUR ADVICX
               </span>
