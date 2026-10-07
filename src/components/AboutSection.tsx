@@ -10,15 +10,15 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }) => {
   return (
-    <section id="about" className="py-20 md:py-28 bg-[#061814] relative overflow-hidden">
+    <section id="about" className="py-16 md:py-24 lg:py-28 bg-[#061814] relative overflow-hidden">
       {/* Subtle background ambient glow */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Eyebrow label, heading, presentation copy, core competencies, CTA */}
-          <div className="lg:col-span-6 space-y-6 text-left max-w-xl">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-left max-w-xl">
             
             {/* Eyebrow Label */}
             <div className="inline-block">
@@ -28,19 +28,19 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
             </div>
 
             {/* Large Multi-line Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.14] font-display">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.14] font-display break-words">
               Your Trusted Partner for<br className="hidden sm:inline" />
               IT & Professional Printing Solutions
             </h2>
 
             {/* Supporting Paragraph */}
-            <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-slate-300 font-normal leading-relaxed">
               MOD Innovations delivers dependable printing equipment, advanced electronics repair, high-grade printer accessories, custom graphic design, digital production, and architectural 3D signage. We combine technical proficiency with hands-on support to keep your operations running smoothly.
             </p>
 
             {/* Core Competencies Matrix */}
-            <div className="pt-2 grid grid-cols-2 gap-4 sm:gap-5">
-              <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg bg-emerald-900/60 flex items-center justify-center text-[#84CC16] shrink-0 mt-0.5">
                   <Wrench className="w-4 h-4" />
                 </div>
@@ -50,7 +50,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg bg-emerald-900/60 flex items-center justify-center text-[#84CC16] shrink-0 mt-0.5">
                   <Printer className="w-4 h-4" />
                 </div>
@@ -60,7 +60,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg bg-emerald-900/60 flex items-center justify-center text-[#84CC16] shrink-0 mt-0.5">
                   <Sparkles className="w-4 h-4" />
                 </div>
@@ -70,7 +70,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg bg-emerald-900/60 flex items-center justify-center text-[#84CC16] shrink-0 mt-0.5">
                   <Layers className="w-4 h-4" />
                 </div>
@@ -85,7 +85,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
             <div className="pt-2">
               <button
                 onClick={() => onOpenConsultation('General IT & Printing Inquiry')}
-                className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#a3e635] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#a3e635] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95 text-center"
               >
                 CONNECT WITH OUR SPECIALISTS
               </button>
@@ -94,25 +94,25 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
           </div>
 
           {/* Right Column: Overlapping multi-image circular composition & decorative badge */}
-          <div className="lg:col-span-6 relative flex justify-center">
-            <div className="relative w-full max-w-[460px] min-h-[420px] sm:min-h-[460px]">
+          <div className="lg:col-span-6 relative flex justify-center w-full mt-6 lg:mt-0">
+            <div className="relative w-full max-w-[360px] sm:max-w-[420px] md:max-w-[460px] min-h-[360px] sm:min-h-[420px] md:min-h-[460px]">
               
               {/* Stepped Vector Arrow Graphic on Top-Right */}
-              <div className="absolute top-2 right-4 sm:right-6 z-20 pointer-events-none flex items-start gap-1">
-                <svg className="w-18 h-18 text-white/80" viewBox="0 0 80 80" fill="none">
+              <div className="absolute top-2 right-2 sm:right-4 md:right-6 z-20 pointer-events-none flex items-start gap-1">
+                <svg className="w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 text-white/80" viewBox="0 0 80 80" fill="none">
                   <path 
                     d="M18 55 L 28 55 L 28 35 L 42 35 L 42 16 L 62 16" 
                     stroke="currentColor" 
                     strokeWidth="1.8" 
                     strokeLinecap="round" 
-                    strokeLinejoin="round"
+                    strokeLinejoin="round" 
                   />
                   <path 
                     d="M54 10 L 64 16 L 54 22" 
                     stroke="currentColor" 
                     strokeWidth="1.8" 
                     strokeLinecap="round" 
-                    strokeLinejoin="round"
+                    strokeLinejoin="round" 
                   />
                 </svg>
               </div>
@@ -129,7 +129,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
               </div>
 
               {/* Bottom-Right Circular Photo: Mainboard Diagnostic Technician */}
-              <div className="w-[66%] aspect-square rounded-full overflow-hidden shadow-2xl border border-emerald-800/40 -mt-16 sm:-mt-20 ml-auto relative z-10 bg-emerald-950">
+              <div className="w-[66%] aspect-square rounded-full overflow-hidden shadow-2xl border border-emerald-800/40 -mt-12 sm:-mt-16 md:-mt-20 ml-auto relative z-10 bg-emerald-950">
                 <img 
                   src={technicianImg} 
                   alt="MOD Innovations printer mainboard technician" 
@@ -139,8 +139,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 <div className="absolute inset-0 bg-emerald-950/10 pointer-events-none" />
               </div>
 
-              {/* Rotating Circular Brand Stamp Badge (positioned at bottom-left overlap) */}
-              <div className="absolute bottom-4 left-0 sm:left-4 z-20 w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#07241d] border border-emerald-700/60 shadow-2xl flex items-center justify-center p-1">
+              {/* Rotating Circular Brand Stamp Badge */}
+              <div className="absolute bottom-2 sm:bottom-4 left-0 sm:left-4 z-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-[#07241d] border border-emerald-700/60 shadow-2xl flex items-center justify-center p-1">
                 {/* Rotating SVG Curved Text */}
                 <svg className="w-full h-full animate-spin-slow" viewBox="0 0 100 100">
                   <path
@@ -156,8 +156,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenConsultation }
                 </svg>
 
                 {/* Center Static Arrow Badge */}
-                <div className="absolute inset-0 m-auto w-10 h-10 rounded-full bg-[#a3e635] text-slate-950 flex items-center justify-center shadow-md">
-                  <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
+                <div className="absolute inset-0 m-auto w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#a3e635] text-slate-950 flex items-center justify-center shadow-md">
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                 </div>
               </div>
 

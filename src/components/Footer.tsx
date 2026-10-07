@@ -45,12 +45,12 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-4 space-y-4">
             <button 
               onClick={() => handleLinkClick('home')}
-              className="inline-block cursor-pointer text-left"
+              className="inline-block cursor-pointer text-left shrink-0"
             >
               <img 
                 src="https://i.ibb.co/60dH7n7H/MOD-Innovations-Transparent-Logo-Light-Version.png" 
                 alt="MOD Innovations Logo" 
-                className="h-[52px] w-auto object-contain"
+                className="h-10 sm:h-12 lg:h-[50px] w-auto max-w-[180px] sm:max-w-none object-contain"
                 referrerPolicy="no-referrer"
               />
             </button>

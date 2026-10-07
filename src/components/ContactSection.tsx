@@ -34,40 +34,40 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#051512] relative overflow-hidden border-t border-emerald-950">
+    <section id="contact" className="py-16 md:py-24 lg:py-28 bg-[#051512] relative overflow-hidden border-t border-emerald-950">
       {/* Subtle radial glow */}
       <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-[#84cc16]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
           <div className="inline-block">
             <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
               GET IN TOUCH · CONTACT MOD INNOVATIONS
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
             Start Your Project or Request Technical Service
           </h2>
 
-          <p className="text-sm text-slate-300 font-normal leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
             Reach out to MOD Innovations for prompt assistance with printer repairs, hardware maintenance, equipment sales, custom branding, digital printing, and 3D signage.
           </p>
         </div>
 
         {/* Split Contact Form & Direct Information */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
           
           {/* Left Column: Direct Contact Info & Quick Value Props */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-7 sm:p-9 shadow-2xl">
-            <div className="space-y-6">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 sm:space-y-8 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-5 sm:p-7 md:p-9 shadow-2xl">
+            <div className="space-y-5 sm:space-y-6">
               <div className="space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#84cc16]">
                   Direct Communication
                 </span>
-                <h3 className="text-2xl font-bold font-display text-white">
+                <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
                   We&apos;re Here to Help You Keep Printing
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -76,17 +76,17 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
               </div>
 
               {/* Contact Channels */}
-              <div className="space-y-4 pt-2">
+              <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
                 <a 
                   href="tel:0207004123" 
-                  className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                  className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                    <PhoneCall className="w-5 h-5 stroke-[2.2]" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                    <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Phone & Call Desk</span>
-                    <span className="text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors">0207004123</span>
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Phone & Call Desk</span>
+                    <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors truncate block">0207004123</span>
                   </div>
                 </a>
 
@@ -94,27 +94,27 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                   href="https://wa.me/0207004123" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                  className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                    <MessageSquare className="w-5 h-5 stroke-[2.2]" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                    <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">WhatsApp Chat</span>
-                    <span className="text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors">0207004123</span>
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">WhatsApp Chat</span>
+                    <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors truncate block">0207004123</span>
                   </div>
                 </a>
 
                 <a 
                   href="mailto:nanadjan5050@gmail.com" 
-                  className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                  className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 stroke-[2.2]" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Email Inquiries</span>
-                    <span className="text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors">nanadjan5050@gmail.com</span>
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Email Inquiries</span>
+                    <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors truncate block">nanadjan5050@gmail.com</span>
                   </div>
                 </a>
 
@@ -122,20 +122,20 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                   href="https://www.modinnovations.net" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                  className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                 >
-                  <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                    <Globe className="w-5 h-5 stroke-[2.2]" />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                    <Globe className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Official Website</span>
-                    <span className="text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors">www.modinnovations.net</span>
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Official Website</span>
+                    <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDEBC] transition-colors truncate block">www.modinnovations.net</span>
                   </div>
                 </a>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-emerald-900/40 text-xs text-slate-400">
+            <div className="pt-4 sm:pt-6 border-t border-emerald-900/40 text-xs text-slate-400">
               <p className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#84cc16] shrink-0" />
                 <span>Responsive technical support & custom project estimates</span>
@@ -144,7 +144,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
           </div>
 
           {/* Right Column: Interactive Inquiry Form */}
-          <div className="lg:col-span-7 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-7 sm:p-9 shadow-2xl flex flex-col justify-center">
+          <div className="lg:col-span-7 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-5 sm:p-7 md:p-9 shadow-2xl flex flex-col justify-center">
             {isSubmitted ? (
               <div className="text-center py-10 space-y-4 animate-in zoom-in-95 duration-300">
                 <div className="w-16 h-16 rounded-full bg-[#84cc16] text-slate-950 mx-auto flex items-center justify-center shadow-xl shadow-lime-500/20">

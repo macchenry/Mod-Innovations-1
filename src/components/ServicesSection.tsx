@@ -142,7 +142,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   onOpenConsultation 
 }) => {
   return (
-    <section id="services" className="relative py-20 md:py-28 bg-[#051512] overflow-hidden">
+    <section id="services" className="relative py-16 md:py-24 lg:py-28 bg-[#051512] overflow-hidden">
       {/* Full-width dark photographic background */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -155,17 +155,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(16,185,129,0.1),transparent_70%)]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         
         {/* Centered Eyebrow Label & Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
           <div className="inline-block">
             <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
               WHAT WE SPECIALIZE IN · OUR EXPERTISE
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
             Comprehensive Printing & Technical Solutions
           </h2>
           <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">
@@ -174,12 +174,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         </div>
 
         {/* Structured Three-Column Service-Card Layout (3 cols x 3 rows = 9 cards) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
           {servicesData.map((service) => (
             <div 
               key={service.id}
               onClick={() => onSelectService(service)}
-              className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[350px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
+              className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[300px] sm:min-h-[340px] md:min-h-[360px] flex flex-col justify-end items-center text-center p-6 sm:p-7 md:p-8 cursor-pointer border-none transition-all duration-300"
             >
               <img 
                 src={service.image} 
@@ -192,7 +192,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
               {/* Title positioned just above the round icon shape */}
               <div className="relative z-10 w-full flex flex-col items-center space-y-3">
-                <h3 className="text-lg sm:text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                   {service.title}
                 </h3>
 

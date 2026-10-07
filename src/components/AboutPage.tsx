@@ -188,7 +188,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 1: PAGE HERO */}
       {/* ========================================================================= */}
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#051512] border-b border-emerald-950/60">
+      <section className="relative py-14 sm:py-20 lg:py-28 overflow-hidden bg-[#051512] border-b border-emerald-950/60">
         {/* Ambient Dark Photographic Background */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -201,7 +201,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(132,204,22,0.08),transparent_70%)]" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-6">
             <button 
@@ -214,33 +214,33 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             <span className="text-[#84CC16]">About Us</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-8 space-y-6 text-left">
+            <div className="lg:col-span-8 space-y-5 sm:space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-800/60 text-[#84CC16] text-xs font-bold uppercase tracking-widest">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>ABOUT MOD INNOVATIONS</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08] font-display">
-                Your Trusted Partner for <br />
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-display break-words">
+                Your Trusted Partner for <br className="hidden sm:inline" />
                 <span className="text-[#84CC16]">IT & Professional Printing</span> Solutions
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
                 MOD Innovations is dedicated to delivering specialized printer hardware sales, precision mainboard and control board repairs, production supplies, creative design, digital printing, and custom 3D signage.
               </p>
 
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
                 <a
                   href="#about-details"
-                  className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#84cc16] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95"
+                  className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#84cc16] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95 text-center"
                 >
                   Discover Our Mission
                 </a>
                 <button
                   onClick={() => onOpenConsultation('Technical Consultation & Inquiry')}
-                  className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-white bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800/80 transition-all duration-200 inline-flex items-center justify-center cursor-pointer active:scale-95 gap-2"
+                  className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-white bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800/80 transition-all duration-200 inline-flex items-center justify-center cursor-pointer active:scale-95 gap-2 text-center"
                 >
                   <span>Connect With Specialists</span>
                   <ArrowRight className="w-4 h-4 text-[#84cc16]" />
@@ -249,14 +249,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Right Stat / Value Quick-Card */}
-            <div className="lg:col-span-4">
-              <div className="bg-[#061814]/90 border border-emerald-800/70 p-7 sm:p-8 rounded-2xl shadow-2xl backdrop-blur-md space-y-6">
+            <div className="lg:col-span-4 w-full">
+              <div className="bg-[#061814]/90 border border-emerald-800/70 p-5 sm:p-7 md:p-8 rounded-2xl shadow-2xl backdrop-blur-md space-y-5 sm:space-y-6">
                 <div className="space-y-1">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#84cc16]">Core Focus</span>
-                  <h3 className="text-xl font-bold font-display text-white">Full-Spectrum IT & Printing</h3>
+                  <h3 className="text-lg sm:text-xl font-bold font-display text-white">Full-Spectrum IT & Printing</h3>
                 </div>
 
-                <div className="space-y-3.5 text-xs text-slate-300">
+                <div className="space-y-3 text-xs text-slate-300">
                   <div className="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-950/60 border border-emerald-900/50">
                     <Wrench className="w-4 h-4 text-[#84cc16] shrink-0" />
                     <span>Mainboard & Component Circuit Repairs</span>
@@ -283,30 +283,30 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 2: ABOUT MOD INNOVATIONS */}
       {/* ========================================================================= */}
-      <section id="about-details" className="py-20 md:py-28 bg-[#061814] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <section id="about-details" className="py-16 md:py-24 lg:py-28 bg-[#061814] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
             {/* Left Column: Visual Overlapping Composition */}
-            <div className="lg:col-span-6 relative flex justify-center order-2 lg:order-1">
-              <div className="relative w-full max-w-[460px] min-h-[420px] sm:min-h-[460px]">
+            <div className="lg:col-span-6 relative flex justify-center order-2 lg:order-1 w-full mt-6 lg:mt-0">
+              <div className="relative w-full max-w-[360px] sm:max-w-[420px] md:max-w-[460px] min-h-[360px] sm:min-h-[420px] md:min-h-[460px]">
                 
                 {/* Stepped Vector Arrow Graphic on Top-Right */}
-                <div className="absolute top-2 right-4 sm:right-6 z-20 pointer-events-none flex items-start gap-1">
-                  <svg className="w-18 h-18 text-white/80" viewBox="0 0 80 80" fill="none">
+                <div className="absolute top-2 right-2 sm:right-4 md:right-6 z-20 pointer-events-none flex items-start gap-1">
+                  <svg className="w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 text-white/80" viewBox="0 0 80 80" fill="none">
                     <path 
                       d="M18 55 L 28 55 L 28 35 L 42 35 L 42 16 L 62 16" 
                       stroke="currentColor" 
                       strokeWidth="1.8" 
                       strokeLinecap="round" 
-                      strokeLinejoin="round"
+                      strokeLinejoin="round" 
                     />
                     <path 
                       d="M54 10 L 64 16 L 54 22" 
                       stroke="currentColor" 
                       strokeWidth="1.8" 
                       strokeLinecap="round" 
-                      strokeLinejoin="round"
+                      strokeLinejoin="round" 
                     />
                   </svg>
                 </div>
@@ -323,7 +323,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
 
                 {/* Bottom-Right Circular Photo: Mainboard Diagnostic Technician */}
-                <div className="w-[66%] aspect-square rounded-full overflow-hidden shadow-2xl border border-emerald-800/40 -mt-16 sm:-mt-20 ml-auto relative z-10 bg-emerald-950">
+                <div className="w-[66%] aspect-square rounded-full overflow-hidden shadow-2xl border border-emerald-800/40 -mt-12 sm:-mt-16 md:-mt-20 ml-auto relative z-10 bg-emerald-950">
                   <img 
                     src={technicianImg} 
                     alt="MOD Innovations printer mainboard technician" 
@@ -334,7 +334,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
 
                 {/* Rotating Circular Brand Stamp Badge */}
-                <div className="absolute bottom-4 left-0 sm:left-4 z-20 w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#07241d] border border-emerald-700/60 shadow-2xl flex items-center justify-center p-1">
+                <div className="absolute bottom-2 sm:bottom-4 left-0 sm:left-4 z-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-[#07241d] border border-emerald-700/60 shadow-2xl flex items-center justify-center p-1">
                   <svg className="w-full h-full animate-spin-slow" viewBox="0 0 100 100">
                     <path
                       id="aboutPageCirclePath"
@@ -348,8 +348,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                     </text>
                   </svg>
 
-                  <div className="absolute inset-0 m-auto w-10 h-10 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md">
-                    <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
+                  <div className="absolute inset-0 m-auto w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#84cc16] text-slate-950 flex items-center justify-center shadow-md">
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                   </div>
                 </div>
 
@@ -357,18 +357,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Right Column: Narrative & Presentation */}
-            <div className="lg:col-span-6 space-y-6 text-left max-w-xl order-1 lg:order-2">
+            <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-left max-w-xl order-1 lg:order-2">
               <div className="inline-block">
                 <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                   WHO WE ARE
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.14] font-display">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.14] font-display break-words">
                 Dedicated Technical Mastery & Printing Precision
               </h2>
 
-              <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-slate-300 font-normal leading-relaxed">
                 MOD Innovations is a trusted partner for IT and professional printing solutions. We provide high-performance hardware, component-level repairs, and custom manufacturing designed to meet commercial print production standards.
               </p>
 
@@ -376,7 +376,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 Whether diagnosing faulty printer mainboards, supplying specialized accessories, printing custom merchandise, or fabricating architectural 3D signage, we approach every task with rigorous standards and deep technical capability.
               </p>
 
-              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div className="p-4 rounded-xl bg-[#04110e] border border-emerald-900/50">
                   <h4 className="text-sm font-bold text-white font-display flex items-center gap-2">
                     <Cpu className="w-4 h-4 text-[#84CC16]" />
@@ -402,7 +402,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 3: WHAT WE SPECIALIZE IN */}
       {/* ========================================================================= */}
-      <section id="specialization" className="relative py-20 md:py-28 bg-[#051512] overflow-hidden">
+      <section id="specialization" className="relative py-16 md:py-24 lg:py-28 bg-[#051512] overflow-hidden">
         {/* Full-width dark photographic background */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -414,16 +414,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="absolute inset-0 bg-gradient-to-b from-[#051512] via-[#051512]/95 to-[#051512]" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           
-          <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
             <div className="inline-block">
               <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                 WHAT WE SPECIALIZE IN · OUR EXPERTISE
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
               Comprehensive Service Capabilities
             </h2>
             <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">
@@ -432,12 +432,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           </div>
 
           {/* 9 Specialization Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
             {specializations.map((service) => (
               <div 
                 key={service.id}
                 onClick={() => onSelectService(service)}
-                className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[350px] flex flex-col justify-end items-center text-center p-7 sm:p-8 cursor-pointer border-none transition-all duration-300"
+                className="group relative rounded-[1px] overflow-hidden shadow-xl bg-emerald-950 min-h-[300px] sm:min-h-[340px] md:min-h-[360px] flex flex-col justify-end items-center text-center p-6 sm:p-7 md:p-8 cursor-pointer border-none transition-all duration-300"
               >
                 <img 
                   src={service.image} 
@@ -448,7 +448,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-[#051512]/95 via-[#051512]/60 to-transparent pointer-events-none" />
 
                 <div className="relative z-10 w-full flex flex-col items-center space-y-3">
-                  <h3 className="text-lg sm:text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold font-display text-[#84CC16] group-hover:text-[#EFDFBD] transition-colors tracking-tight drop-shadow-md">
                     {service.title}
                   </h3>
 
@@ -470,61 +470,61 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 4: OUR APPROACH TO QUALITY AND RELIABILITY */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#061814] relative overflow-hidden border-t border-emerald-950">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <section className="py-16 md:py-24 lg:py-28 bg-[#061814] relative overflow-hidden border-t border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           
-          <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
             <div className="inline-block">
               <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                 METHODOLOGY & STANDARDS
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
               Our Approach to Quality and Reliability
             </h2>
 
-            <p className="text-sm text-slate-300 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
               We apply rigorous technical procedures to ensure every printer repaired, system deployed, print produced, and sign installed meets exacting operational standards.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#04110e] border border-emerald-900/50 p-6 rounded-2xl space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            <div className="bg-[#04110e] border border-emerald-900/50 p-5 sm:p-6 rounded-2xl space-y-3 sm:space-y-4">
               <div className="w-10 h-10 rounded-xl bg-emerald-900/60 text-[#84CC16] flex items-center justify-center">
                 <Cpu className="w-5 h-5 stroke-[2.2]" />
               </div>
-              <h3 className="text-lg font-bold font-display text-white">1. Component Diagnostics</h3>
+              <h3 className="text-base sm:text-lg font-bold font-display text-white">1. Component Diagnostics</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Systematic signal and power tracing to accurately isolate faults in printer mainboards, servo drives, and control chips before beginning repairs.
               </p>
             </div>
 
-            <div className="bg-[#04110e] border border-emerald-900/50 p-6 rounded-2xl space-y-4">
+            <div className="bg-[#04110e] border border-emerald-900/50 p-5 sm:p-6 rounded-2xl space-y-3 sm:space-y-4">
               <div className="w-10 h-10 rounded-xl bg-emerald-900/60 text-[#84CC16] flex items-center justify-center">
                 <Settings className="w-5 h-5 stroke-[2.2]" />
               </div>
-              <h3 className="text-lg font-bold font-display text-white">2. Genuine Components</h3>
+              <h3 className="text-base sm:text-lg font-bold font-display text-white">2. Genuine Components</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Using authentic specification dampers, pumps, cables, and electronic components to preserve hardware reliability and equipment lifespan.
               </p>
             </div>
 
-            <div className="bg-[#04110e] border border-emerald-900/50 p-6 rounded-2xl space-y-4">
+            <div className="bg-[#04110e] border border-emerald-900/50 p-5 sm:p-6 rounded-2xl space-y-3 sm:space-y-4">
               <div className="w-10 h-10 rounded-xl bg-emerald-900/60 text-[#84CC16] flex items-center justify-center">
                 <Eye className="w-5 h-5 stroke-[2.2]" />
               </div>
-              <h3 className="text-lg font-bold font-display text-white">3. Output Calibration</h3>
+              <h3 className="text-base sm:text-lg font-bold font-display text-white">3. Output Calibration</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Precise printhead nozzle alignment, color profiling, and test firing to guarantee razor-sharp detail and consistent color accuracy.
               </p>
             </div>
 
-            <div className="bg-[#04110e] border border-emerald-900/50 p-6 rounded-2xl space-y-4">
+            <div className="bg-[#04110e] border border-emerald-900/50 p-5 sm:p-6 rounded-2xl space-y-3 sm:space-y-4">
               <div className="w-10 h-10 rounded-xl bg-emerald-900/60 text-[#84CC16] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5 stroke-[2.2]" />
               </div>
-              <h3 className="text-lg font-bold font-display text-white">4. Post-Service Verification</h3>
+              <h3 className="text-base sm:text-lg font-bold font-display text-white">4. Post-Service Verification</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Full functional stress testing on repaired boards and machinery under real production loads prior to delivery or sign installation.
               </p>
@@ -537,37 +537,37 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 5: WHY CHOOSE US */}
       {/* ========================================================================= */}
-      <section className="py-20 md:py-28 bg-[#051512] relative overflow-hidden border-t border-emerald-950">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <section className="py-16 md:py-24 lg:py-28 bg-[#051512] relative overflow-hidden border-t border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           
-          <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
             <div className="inline-block">
               <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                 WHY CHOOSE MOD INNOVATIONS
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
               Four Core Pillars of Our Service
             </h2>
 
-            <p className="text-sm text-slate-300 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
               We focus squarely on delivering measurable value, reducing equipment downtime, and executing superior print and signage deliverables.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             
             {/* Pillar 1 */}
-            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
+            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-5 sm:p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md">
-                    <Award className="w-6 h-6 stroke-[2.2]" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md shrink-0">
+                    <Award className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <span className="text-xs font-mono font-bold text-slate-500">01</span>
                 </div>
-                <h3 className="text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
                   Quality Service
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -577,15 +577,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Pillar 2 */}
-            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
+            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-5 sm:p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md">
-                    <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md shrink-0">
+                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <span className="text-xs font-mono font-bold text-slate-500">02</span>
                 </div>
-                <h3 className="text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
                   Reliable Solutions
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -595,15 +595,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Pillar 3 */}
-            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
+            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-5 sm:p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md">
-                    <Cpu className="w-6 h-6 stroke-[2.2]" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md shrink-0">
+                    <Cpu className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <span className="text-xs font-mono font-bold text-slate-500">03</span>
                 </div>
-                <h3 className="text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
                   Technical Expertise
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -613,15 +613,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Pillar 4 */}
-            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
+            <div className="group bg-[#04110e] border border-emerald-900/40 hover:border-[#84cc16]/40 p-5 sm:p-7 rounded-2xl transition-all duration-300 shadow-xl flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md">
-                    <CheckCircle2 className="w-6 h-6 stroke-[2.2]" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900/50 group-hover:bg-[#84cc16] text-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shadow-md shrink-0">
+                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                   </div>
                   <span className="text-xs font-mono font-bold text-slate-500">04</span>
                 </div>
-                <h3 className="text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-[#EFDFBD] transition-colors">
                   Professional Results
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -637,35 +637,35 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       {/* ========================================================================= */}
       {/* SECTION 6: CONTACT / CTA SECTION */}
       {/* ========================================================================= */}
-      <section id="contact" className="py-20 md:py-28 bg-[#061814] relative overflow-hidden border-t border-emerald-950">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <section id="contact" className="py-16 md:py-24 lg:py-28 bg-[#061814] relative overflow-hidden border-t border-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           
-          <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16 space-y-3">
             <div className="inline-block">
               <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-slate-200 font-display">
                 CONNECT WITH MOD INNOVATIONS
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight font-display break-words">
               Have a Project or Equipment Need?
             </h2>
 
-            <p className="text-sm text-slate-300 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
               Contact our team today for prompt diagnosis, printer sales, accessories inquiries, custom branding, or 3D signage fabrication.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-stretch">
             
             {/* Left Info Column */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-7 sm:p-9 shadow-2xl">
-              <div className="space-y-6">
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-6 sm:space-y-8 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-5 sm:p-7 md:p-9 shadow-2xl">
+              <div className="space-y-5 sm:space-y-6">
                 <div className="space-y-2">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#84cc16]">
                     Direct Support
                   </span>
-                  <h3 className="text-2xl font-bold font-display text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
                     MOD Innovations Technical Desk
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -673,36 +673,36 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   </p>
                 </div>
 
-                <div className="space-y-4 pt-2">
+                <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
                   <a 
                     href="tel:0207004123" 
-                    className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                    className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                   >
-                    <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                      <PhoneCall className="w-5 h-5 stroke-[2.2]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                      <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Call Direct</span>
-                      <span className="text-sm font-bold text-white group-hover:text-[#EFDFBD] transition-colors">0207004123</span>
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Call Direct</span>
+                      <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDFBD] transition-colors truncate block">0207004123</span>
                     </div>
                   </a>
 
                   <a 
                     href="mailto:nanadjan5050@gmail.com" 
-                    className="flex items-center gap-4 p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
+                    className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-emerald-950/50 border border-emerald-900/60 hover:border-[#84cc16]/50 transition-colors group"
                   >
-                    <div className="w-11 h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 stroke-[2.2]" />
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-emerald-900/80 text-[#84cc16] group-hover:bg-[#84cc16] group-hover:text-slate-950 transition-colors flex items-center justify-center shrink-0">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Email Desk</span>
-                      <span className="text-sm font-bold text-white group-hover:text-[#EFDFBD] transition-colors">nanadjan5050@gmail.com</span>
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Email Desk</span>
+                      <span className="text-xs sm:text-sm font-bold text-white group-hover:text-[#EFDFBD] transition-colors truncate block">nanadjan5050@gmail.com</span>
                     </div>
                   </a>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-emerald-900/40 text-xs text-slate-400">
+              <div className="pt-4 sm:pt-6 border-t border-emerald-900/40 text-xs text-slate-400">
                 <p className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#84cc16] shrink-0" />
                   <span>Personalized service for print shops, studios & businesses</span>
@@ -711,7 +711,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </div>
 
             {/* Right Form Column */}
-            <div className="lg:col-span-7 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-7 sm:p-9 shadow-2xl flex flex-col justify-center">
+            <div className="lg:col-span-7 bg-[#04110e] border border-emerald-900/50 rounded-2xl p-5 sm:p-7 md:p-9 shadow-2xl flex flex-col justify-center">
               {submitted ? (
                 <div className="text-center py-10 space-y-4 animate-in zoom-in-95 duration-300">
                   <div className="w-16 h-16 rounded-full bg-[#84cc16] text-slate-950 mx-auto flex items-center justify-center shadow-xl shadow-lime-500/20">

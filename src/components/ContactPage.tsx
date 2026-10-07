@@ -402,7 +402,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           
           {/* Left Column: Context & Overview */}
-          <div className="lg:col-span-5 bg-[#061814] border border-emerald-900/60 rounded-3xl p-8 sm:p-10 shadow-2xl flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-5 bg-[#061814] border border-emerald-900/60 rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl flex flex-col justify-between space-y-6 sm:space-y-8">
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#84cc16]">
@@ -458,7 +458,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           </div>
 
           {/* Right Column: Interactive Request Form */}
-          <div className="lg:col-span-7 bg-[#061814] border border-emerald-900/60 rounded-3xl p-8 sm:p-10 shadow-2xl flex flex-col justify-center">
+          <div className="lg:col-span-7 bg-[#061814] border border-emerald-900/60 rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl flex flex-col justify-center">
             {isSubmitted ? (
               <div className="text-center py-10 space-y-5 animate-in zoom-in-95 duration-300">
                 <div className="w-16 h-16 rounded-full bg-[#84cc16] text-slate-950 mx-auto flex items-center justify-center shadow-xl shadow-lime-500/20">

@@ -308,10 +308,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
 
             {/* Filter Buttons */}
-            <div className="inline-flex p-1.5 rounded-[50px] bg-[#061814] border border-emerald-900/50">
+            <div className="flex flex-wrap sm:inline-flex p-1 sm:p-1.5 rounded-2xl sm:rounded-[50px] bg-[#061814] border border-emerald-900/50 gap-1 justify-center w-full sm:w-auto">
               <button
                 onClick={() => setActiveCategory('all')}
-                className={`px-4 py-2 rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
                   activeCategory === 'all'
                     ? 'bg-[#84CC16] text-slate-950 shadow-sm'
                     : 'text-slate-400 hover:text-slate-200'
@@ -321,7 +321,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </button>
               <button
                 onClick={() => setActiveCategory('hardware')}
-                className={`px-4 py-2 rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
                   activeCategory === 'hardware'
                     ? 'bg-[#84CC16] text-slate-950 shadow-sm'
                     : 'text-slate-400 hover:text-slate-200'
@@ -331,7 +331,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </button>
               <button
                 onClick={() => setActiveCategory('creative')}
-                className={`px-4 py-2 rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-[50px] text-xs font-bold transition-all cursor-pointer ${
                   activeCategory === 'creative'
                     ? 'bg-[#84CC16] text-slate-950 shadow-sm'
                     : 'text-slate-400 hover:text-slate-200'
@@ -642,12 +642,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </section>
 
       {/* 7. Strong Contact / CTA Section */}
-      <section id="contact-services" className="py-16">
+      <section id="contact-services" className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="rounded-3xl bg-[#061814] border border-emerald-900/50 p-8 sm:p-12 lg:p-16 shadow-2xl space-y-12">
+          <div className="rounded-3xl bg-[#061814] border border-emerald-900/50 p-5 sm:p-8 md:p-12 lg:p-16 shadow-2xl space-y-8 sm:space-y-12">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
               
               {/* Left Column: Direct Info */}
               <div className="lg:col-span-5 space-y-6">

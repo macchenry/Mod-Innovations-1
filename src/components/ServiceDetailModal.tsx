@@ -16,9 +16,9 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
   if (!service) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-2xl bg-[#061814] border border-emerald-800/80 rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-100 my-8"
+        className="relative w-full max-w-2xl bg-[#061814] border border-emerald-800/80 rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 shadow-2xl text-slate-100 my-auto max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}

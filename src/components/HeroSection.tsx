@@ -118,7 +118,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
     <section 
       id="hero" 
       aria-label="Interactive Service Showcase"
-      className="relative min-h-[640px] lg:min-h-[720px] flex items-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-[#071915]"
+      className="relative min-h-[560px] sm:min-h-[640px] lg:min-h-[720px] flex items-center pt-24 sm:pt-28 pb-14 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-[#071915]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -138,7 +138,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(16,185,129,0.12),transparent_60%)]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 w-full">
         {/* Carousel Viewport: text and image belong to the same slide and transition in sync */}
         <div className="overflow-hidden w-full">
           <div 
@@ -148,11 +148,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
             {slidesData.map((slide, idx) => (
               <div 
                 key={slide.id}
-                className="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center"
+                className="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-center"
                 aria-hidden={currentSlide !== idx}
               >
                 {/* Left Column: Service title, subtitle/description, and CTA button */}
-                <div className="lg:col-span-6 space-y-6 text-left max-w-xl">
+                <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-left max-w-xl">
                   {/* Subtle Service Counter Tag */}
                   <div className="inline-flex items-center gap-2">
                     <span className="text-[11px] uppercase tracking-[0.16em] font-semibold text-[#84cc16] font-display">
@@ -162,12 +162,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                   </div>
 
                   {/* Service Title */}
-                  <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-white tracking-tight leading-[1.14] font-display">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold text-white tracking-tight leading-[1.15] font-display break-words">
                     {slide.title}
                   </h1>
 
                   {/* Subtitle / Description */}
-                  <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed max-w-lg">
+                  <p className="text-xs sm:text-sm md:text-base text-slate-300 font-normal leading-relaxed max-w-lg">
                     {slide.subtitle}
                   </p>
 
@@ -175,7 +175,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                   <div className="pt-2">
                     <button
                       onClick={() => onOpenConsultation?.(slide.title)}
-                      className="px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#a3e635] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95"
+                      className="w-full sm:w-auto px-6 py-3.5 rounded-[50px] text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#a3e635] hover:bg-[#bef264] transition-all duration-200 shadow-md shadow-lime-500/15 inline-flex items-center justify-center cursor-pointer active:scale-95 text-center"
                     >
                       {slide.buttonText}
                     </button>
@@ -183,8 +183,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                 </div>
 
                 {/* Right Column: Service Image belonging to this slide */}
-                <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
-                  <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[500px] aspect-[4/3] flex items-center justify-center">
+                <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-2 lg:mt-0 w-full">
+                  <div className="relative w-full max-w-[360px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[500px] aspect-[4/3] flex items-center justify-center mx-auto lg:mx-0">
                     <div className="relative w-full h-full rounded-none overflow-hidden shadow-2xl bg-emerald-950 border-none group">
                       <img 
                         src={slide.image} 
@@ -204,9 +204,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
         </div>
 
         {/* Subtle Slider Navigation Controls & Indicators */}
-        <div className="mt-10 lg:mt-12 pt-4 border-t border-emerald-900/30 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-8 sm:mt-10 lg:mt-12 pt-4 border-t border-emerald-900/30 flex flex-wrap items-center justify-between gap-4">
           {/* Indicators / Progress Pills */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             {slidesData.map((_, idx) => (
               <button
                 key={idx}
@@ -214,7 +214,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                 aria-label={`Go to slide ${idx + 1}`}
                 className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer ${
                   currentSlide === idx 
-                    ? 'w-8 bg-[#a3e635]' 
+                    ? 'w-6 sm:w-8 bg-[#a3e635]' 
                     : 'w-2 bg-emerald-800/60 hover:bg-emerald-600'
                 }`}
               />
@@ -222,8 +222,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           </div>
 
           {/* Slide Navigation Arrows and Counter */}
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-mono text-slate-400 mr-2">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <span className="text-xs font-mono text-slate-400 mr-1 sm:mr-2">
               <span className="text-white font-semibold">{String(currentSlide + 1).padStart(2, '0')}</span>
               <span className="text-slate-600 mx-1">/</span>
               <span>{String(slidesData.length).padStart(2, '0')}</span>
@@ -232,7 +232,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="w-9 h-9 rounded-full border border-emerald-800/60 bg-[#061814]/80 text-slate-300 hover:text-slate-950 hover:bg-[#a3e635] hover:border-[#a3e635] flex items-center justify-center transition-all cursor-pointer active:scale-95 shadow-sm"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-emerald-800/60 bg-[#061814]/80 text-slate-300 hover:text-slate-950 hover:bg-[#a3e635] hover:border-[#a3e635] flex items-center justify-center transition-all cursor-pointer active:scale-95 shadow-sm"
             >
               <ChevronLeft className="w-4 h-4 stroke-[2.5]" />
             </button>
@@ -240,7 +240,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="w-9 h-9 rounded-full border border-emerald-800/60 bg-[#061814]/80 text-slate-300 hover:text-slate-950 hover:bg-[#a3e635] hover:border-[#a3e635] flex items-center justify-center transition-all cursor-pointer active:scale-95 shadow-sm"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-emerald-800/60 bg-[#061814]/80 text-slate-300 hover:text-slate-950 hover:bg-[#a3e635] hover:border-[#a3e635] flex items-center justify-center transition-all cursor-pointer active:scale-95 shadow-sm"
             >
               <ChevronRight className="w-4 h-4 stroke-[2.5]" />
             </button>
